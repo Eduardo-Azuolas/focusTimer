@@ -24,6 +24,54 @@ body {
 
   display: grid;
   min-height: 100vh;
+
+  transition: 0.3s;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.bi {
+  font-size: 2.5rem;
+
+  cursor: pointer;
+}
+
+.bi-moon {
+  display: none;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 3.2rem 4rem 0 0;
+}
+
+.light, .light header{
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
+.light .bi-sun {
+  display: none;
+}
+
+.light .bi-moon {
+  display: block;
+}
+
+.light button {
+  background-color: transparent;
+  border: none;
+}
+
+.light .stop svg path, .light .set svg path, .light .sound-off svg path {
+  fill: var(--primary-color);
+}
+
+.light #controls {
+  background-color: hsla(var(--base-color), 100%, 63%, 0.25);
 }
 
 button {
